@@ -1,0 +1,74 @@
+<!-- views/newNote.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Note</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body>
+    <h1>Create a New Note for <%= user.email %></h1>
+    <div class="container">
+      <form
+        action="/api/v1/user/<%= user._id %>/hotel"
+        method="post"
+        enctype="multipart/form-data"
+      >
+      
+   
+
+      
+        <label for="productName">Place</label>
+        <input
+          type="text"
+          id="productName"
+          name="place"
+          required
+         
+        />
+
+        <label for="productDescription">Product Description:</label>
+        <input
+          id="productDescription"
+          name="description"
+          rows="2"
+          required
+       
+        ></input>
+
+        <label for="productPrice">Hotel Price:</label>
+        <input
+          type="text"
+          id="productPrice"
+          name="rate"
+          step="0.01"
+          required
+       
+        />
+        <label for="productPrice">distance</label>
+        <input
+          type="text"
+          id="productPrice"
+          name="distance"
+          step="0.01"
+          required
+       
+        />
+
+        <label for="productImage">Product Image:</label>
+        <input
+          type="file"
+          id="productImage"
+          name="image"
+          accept="image/*"
+          required
+       
+        />
+
+        <button type="submit">Add Product</button>
+        <a href="/api/v1/user/<%= user._id %>/hotel" >display data</a>
+      </form>
+    </div>
+  </body>
+</html>

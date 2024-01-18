@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/card.css" />
+  </head>
+  <body>
+    <h1>Verified user page</h1>
+    <% data.forEach(item => { %>
+    <div class="card">
+      <img src="/uploads/<%=item.image%>" alt="image" />
+      <div class="card-content">
+        <div class="product-name"><%= item.place %></div>
+        <div class="description"><%= item.description %></div>
+        <p><%= item.distance %></p>
+        <p><%= item.rate %></p>
+        <a href="#" class="button">View Details</a>
+      </div>
+    </div>
+    <% }) %>
+    <!-- <ul>
+      <% data.forEach(item => { %>
+      <li><%= item.place %></li>
+      <li><%= item.description %></li>
+      <li><%= item.distance %></li>
+      <li><%= item.rate %></li>
+      <img src="/uploads/<%=item.image%>" alt="image" />
+      <% }) %>
+    </ul> -->
+  </body>
+</html>

@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-image: url("/image/giftcard.png");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+
+}
+
+.left-image {
+  background-image: url("/image/giftcard.png");
+  background-size: cover;
+  flex-basis: 50%;
+}
+
+.form-container {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+button {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  background-color: #e61e4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: blue;
+}
+/* Previous CSS styles from the previous example remain the same */
+
+.facebook-button,
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 200px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.facebook-button {
+  color: #3b5998;
+}
+
+.google-button {
+  color: #db4a39;
+}

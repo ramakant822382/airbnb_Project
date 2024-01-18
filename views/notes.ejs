@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/card.css" />
+</head>
+<body>
+  
+    <section>
+        <% hotel .forEach(item => { %>
+        <div class="card">
+          <a href="/api/v1/product/<%=item._id%>">
+          <img src="/uploads/<%= item.image %>" alt="image" class="image" />
+  
+          <div class="container">
+            <span class="product-name"><%= item.place %></span>
+            <span class="description"><%= item.description %></span>
+            <span><%= item.distance %></span>
+            <span><%= item.rate %></span>
+          </div>
+          <div class="nav">
+            <button><a href="/api/v1/edit/<%=item._id%>">update</a></button>
+            <button><a href="/api/v1/delete/<%=item._id%>">delete</a></button>
+          </div>
+        </div>
+        <% }) %>
+      </section>
+</body>
+</html>

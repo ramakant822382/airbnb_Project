@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body>
+    <h1>Update cart</h1>
+  
+    <div class="container">
+      <form
+        action="/api/v1/edit/<%=data.id%>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+      
+   
+
+      
+        <label for="productName">Place</label>
+        <input
+          type="text"
+          id="productName"
+          name="place"
+          required
+         value="<%=data.place%>"
+        />
+
+        <label for="productDescription">Product Description:</label>
+        <input
+          id="productDescription"
+          name="description"
+          rows="2"
+          required
+          value="<%=data.description%>"
+        ></input>
+
+        <label for="productPrice">Hotel Price:</label>
+        <input
+          type="text"
+          id="productPrice"
+          name="rate"
+          step="0.01"
+          required
+          value="<%=data.rate%>"
+        />
+        <label for="productPrice">distance</label>
+        <input
+          type="text"
+          id="productPrice"
+          name="distance"
+          step="0.01"
+          required
+          value="<%=data.distance%>"
+        />
+
+        <label for="productImage">Product Image:</label>
+        <input
+          type="file"
+          id="productImage"
+          name="image"
+          accept="image/*"
+          required
+          value="<%=data.image%>"
+        />
+
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  </body>
+</html>

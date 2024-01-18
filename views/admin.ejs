@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/card.css" />
+    <style>
+      .nav {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Admin Page</h1>
+      <a href="/api/v1/adminDashboard"><button>Add</button></a>
+    </div>
+    <section>
+      <% data .forEach(item => { %>
+      <div class="card">
+        <img src="/uploads/<%= item.image %>" alt="image" class="image" />
+
+        <div class="container">
+          <span class="product-name"><%= item.place %></span>
+          <span class="description"><%= item.description %></span>
+          <span><%= item.distance %></span>
+          <span><%= item.rate %></span>
+        </div>
+        <div class="nav">
+          <button><a href="/api/v1/edit/<%=item._id%>">update</a></button>
+          <button><a href="/api/v1/delete/<%=item._id%>">delete</a></button>
+        </div>
+      </div>
+      <% }) %>
+    </section>
+  </body>
+</html>

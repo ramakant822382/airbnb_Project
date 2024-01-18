@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/card.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <%- include('./CommonFile/header') %>
+    <div class="img2">
+      <img
+        src="https://a0.muscache.com/im/pictures/miso/Hosting-37391116/original/85be0a7f-c5c3-462a-8c3e-36c20ae744ef.jpeg?im_w=960"
+        alt="img"
+        class="himg"
+      />
+    </div>
+    <section>
+      <% data .forEach(item => { %>
+      <div class="card">
+        <a href="/api/v1/product/<%=item._id%>">
+        <img src="/uploads/<%= item.image %>" alt="image" class="image" />
+
+        <div class="container">
+          <span class="product-name"><%= item.place %></span>
+          <span class="description"><%= item.description %></span>
+          <span><%= item.distance %></span>
+          <span><%= item.rate %></span>
+        </div>
+      </div>
+      <% }) %>
+    </section>
+
+    <%- include('./CommonFile/footer'); %>
+  </body>
+</html>
